@@ -1,0 +1,31 @@
+services:
+  bee-code-interpreter-k3s:
+    profiles:
+      - all
+      - code_interpreter
+    image: "rancher/k3s:v1.31.2-k3s1"
+    command: ["server", "--tls-san", "bee-code-interpreter-k3s"]
+    tmpfs:
+      - /run
+      - /var/run
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 65535
+        hard: 65535
+    privileged: true
+    restart: always
+    volumes:
+      - k3s-containerd:/var/lib/rancher/k3s/agent/containerd
+      - ${CODE_INTERPRETER_TMPDIR:-./tmp/code_interpreter_target}:/storage
+      - ./infra/bee-code-interpreter.yaml:/var/lib/rancher/k3s/server/manifests/bee-code-interpreter.yaml
+    ports:
+      - "50081:30051"
+    healthcheck:
+      test: "kubectl get pod code-interpreter | grep Running"
+      interval: 10s
+      retries: 10
+      start_period: 30s
+
+volumes:
+  k3s-containerd:
