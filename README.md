@@ -21,7 +21,9 @@ This starter template lets you quickly start working with the [BeeAI Framework](
 1. Clone this repository or [use it as a template](https://github.com/new?template_name=beeai-framework-py-starter&template_owner=i-am-bee).
 2. Install dependencies `poetry install`.
 3. Install and start the poetry environment `poetry self add poetry-plugin-shell` and `poetry shell`
-4. Configure your project by filling in missing values in the `.env` file (default LLM provider is locally hosted `Ollama`).
+4. Configure your project by 
+    1. Make a copy of `.env.example` and rename the copy to `.env`
+    2. Fill in missing values in the `.env` file (default LLM provider is locally hosted `Ollama`).
 5. Run the agent `python beeai_framework_starter/agent.py`
 
 To run an agent with a custom prompt, simply do this `python beeai_framework_starter/agent.py <<< 'Hello Bee!'`
@@ -44,7 +46,7 @@ To run an agent with a custom prompt, simply do this `python beeai_framework_sta
 
 ## 🔒Code interpreter
 
-The [Bee Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) is a gRPC service that an agent uses to execute an arbitrary Python code safely.
+The [Bee Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) is an HTTP service that an agent uses to execute an arbitrary Python code safely.
 
 ### Instructions
 
