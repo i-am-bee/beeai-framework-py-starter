@@ -1,10 +1,10 @@
 services:
-  bee-code-interpreter-k3s:
+  code-interpreter-k3s:
     profiles:
       - all
       - code_interpreter
     image: "rancher/k3s:v1.31.2-k3s1"
-    command: ["server", "--tls-san", "bee-code-interpreter-k3s"]
+    command: ["server", "--tls-san", "code-interpreter-k3s"]
     tmpfs:
       - /run
       - /var/run
@@ -18,7 +18,7 @@ services:
     volumes:
       - k3s-containerd:/var/lib/rancher/k3s/agent/containerd
       - ${CODE_INTERPRETER_TMPDIR:-./tmp/code_interpreter_target}:/storage
-      - ./infra/bee-code-interpreter.yaml:/var/lib/rancher/k3s/server/manifests/bee-code-interpreter.yaml
+      - ./infra/code-interpreter.yaml:/var/lib/rancher/k3s/server/manifests/code-interpreter.yaml
     ports:
       - "50081:30051"
     healthcheck:

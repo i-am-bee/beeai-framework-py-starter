@@ -6,7 +6,7 @@ This starter template lets you quickly start working with the [BeeAI Framework](
 
 ## ✨ Key Features
 
-- 🔒 Safely execute an arbitrary Python Code via [Bee Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter).
+- 🔒 Safely execute an arbitrary Python Code via [BeeAI Code Interpreter](https://github.com/i-am-bee/beeai-code-interpreter).
 - 🚀 Fully fledged Python project setup with linting and formatting.
 
 ## 📦 Requirements
@@ -32,7 +32,7 @@ To run an agent with a custom prompt, simply do this `python beeai_framework_sta
 
 > [!TIP]
 >
-> To use Bee agent with [Python Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) refer to the [Code Interpreter](#code-interpreter) section.
+> To use an agent with [Python Code Interpreter](https://github.com/i-am-bee/beeai-code-interpreter) refer to the [Code Interpreter](#code-interpreter) section.
 
 ## 🏗 Infrastructure
 
@@ -46,11 +46,11 @@ To run an agent with a custom prompt, simply do this `python beeai_framework_sta
 
 ## 🔒Code interpreter
 
-The [Bee Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) is an HTTP service that an agent uses to execute an arbitrary Python code safely.
+The [BeeAI Code Interpreter](https://github.com/i-am-bee/beeai-code-interpreter) is an HTTP service that an agent uses to execute an arbitrary Python code safely.
 
 ### Instructions
 
-1. Start all services related to the [`Code Interpreter`](https://github.com/i-am-bee/bee-code-interpreter) `poe infra --type start`
+1. Start all services related to the [`Code Interpreter`](https://github.com/i-am-bee/beeai-code-interpreter) `poe infra --type start`
 2. Run the agent `python beeai_framework_starter/agent_code_interpreter.py`
 
 > [!NOTE]
