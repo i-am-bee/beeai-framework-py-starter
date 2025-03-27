@@ -1,6 +1,6 @@
-# 🐝 BeeAI Framework Python Starter
+# BeeAI Framework Python Starter
 
-This starter template lets you quickly start working with the [BeeAI Framework](https://github.com/i-am-bee/beeai-framework) in a second.
+This starter template helps you quickly get started with the [BeeAI framework for Python](https://github.com/i-am-bee/beeai-framework/python).
 
 📚 See the [documentation](https://i-am-bee.github.io/beeai-framework/) to learn more.
 
@@ -21,18 +21,12 @@ This starter template lets you quickly start working with the [BeeAI Framework](
 1. Clone this repository or [use it as a template](https://github.com/new?template_name=beeai-framework-py-starter&template_owner=i-am-bee).
 2. Install dependencies `poetry install`.
 3. Install and start the poetry environment `poetry self add poetry-plugin-shell` and `poetry shell`
-4. Configure your project:
-    1. Make a copy of `.env.example` and rename the copy to `.env`
-    2. Fill in missing values in the `.env` file (default LLM provider is locally hosted `Ollama`).
+4. Configure your project by filling in missing values in the `.env` file (default LLM provider is locally hosted `Ollama`).
 5. Run the agent `python beeai_framework_starter/agent.py`
 
-To run an agent with a custom prompt, simply do this `python beeai_framework_starter/agent.py <<< 'Hello Bee!'`
+To run an agent with a custom prompt, simply do this `python beeai_framework_starter/agent.py <<< 'Hello!'`
 
 🧪 More examples can be found [here](https://github.com/i-am-bee/beeai-framework/blob/main/python/examples).
-
-> [!TIP]
->
-> To use Bee agent with [Python Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) refer to the [Code Interpreter](#code-interpreter) section.
 
 ## 🏗 Infrastructure
 
@@ -46,13 +40,13 @@ To run an agent with a custom prompt, simply do this `python beeai_framework_sta
 
 ## 🔒Code interpreter
 
-The [Bee Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) is an HTTP service that an agent uses to execute an arbitrary Python code safely.
+[BeeAI Code Interpreter](https://github.com/i-am-bee/bee-code-interpreter) is a gRPC service that an agent uses to execute an arbitrary Python code safely.
 
 ### Instructions
 
-1. Start all services related to the [`Code Interpreter`](https://github.com/i-am-bee/bee-code-interpreter) `poe infra --type start`
+1. Start all services related to the [`BeeAI Code Interpreter`](https://github.com/i-am-bee/beeai-code-interpreter) `poe infra --type start`
 2. Run the agent `python beeai_framework_starter/agent_code_interpreter.py`
 
 > [!NOTE]
 >
-> Code Interpreter runs on `http://127.0.0.1:50081`.
+> BeeAI Code Interpreter runs on `http://127.0.0.1:50081`.
