@@ -21,7 +21,7 @@ This starter template lets you quickly start working with the [BeeAI Framework](
 1. Clone this repository or [use it as a template](https://github.com/new?template_name=beeai-framework-py-starter&template_owner=i-am-bee).
 2. Install dependencies `poetry install`.
 3. Install and start the poetry environment `poetry self add poetry-plugin-shell` and `poetry shell`
-4. Configure your project by 
+4. Configure your project:
     1. Make a copy of `.env.example` and rename the copy to `.env`
     2. Fill in missing values in the `.env` file (default LLM provider is locally hosted `Ollama`).
 5. Run the agent `python beeai_framework_starter/agent.py`
