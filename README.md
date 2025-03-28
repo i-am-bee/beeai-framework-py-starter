@@ -49,7 +49,7 @@ poetry install
 poetry self add poetry-plugin-shell && poetry shell
 ```
 
-**Step four:** Configure your project by filling in missing values in the `.env` file.
+**Step four:** Create an `.env` file with the contents from `.env.template`
 
 > [!TIP] 
 > To run the examples below, [Ollama](https://ollama.com/) must be installed and running, with the llama3.1 model pulled.
