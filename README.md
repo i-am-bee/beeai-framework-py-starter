@@ -1,5 +1,7 @@
 # 🚀 BeeAI Framework Python Starter <img align="cener" alt="Project Status: Alpha" src="https://img.shields.io/badge/Status-Alpha-red">
 
+[![Python library](https://img.shields.io/badge/Python-4584b6?style=flat&logo=python&logoColor=white)](https://github.com/i-am-bee/beeai-framework/tree/main/python)
+[![Typescript library](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript&logoColor=white)](https://github.com/i-am-bee/beeai-framework/tree/main/typescript)
 [![License](https://img.shields.io/badge/License-Apache%202.0-EA7826?style=flat)](https://github.com/i-am-bee/beeai-framework?tab=Apache-2.0-1-ov-file#readme)
 [![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=flat&logo=bluesky&logoColor=white)](https://bsky.app/profile/beeaiagents.bsky.social)
 [![Discord](https://img.shields.io/discord/1309202615556378705?style=social&logo=discord&logoColor=black&label=Discord&labelColor=7289da&color=black)](https://discord.com/invite/NradeA6ZNF)
