@@ -35,8 +35,8 @@ This starter template helps you **quickly** get started with the [BeeAI framewor
 
 **Step one:** Clone this repository or [use it as a template](https://github.com/new?template_name=beeai-framework-py-starter&template_owner=i-am-bee)
 ```sh
-git clone https://github.com/i-am-bee/bee-agent-framework-starter.git
-cd bee-agent-framework-starter
+git clone https://github.com/i-am-bee/beeai-framework-py-starter.git
+cd beeai-framework-py-starter
 ```
 
 **Step two:** Install dependencies
