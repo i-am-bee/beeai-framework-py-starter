@@ -21,12 +21,12 @@ This starter template helps you **quickly** get started with the [BeeAI framewor
 ## 📋 Requirements
 
 - **Python 3.11+**
-- **Poetry** for Python package management. Installation steps [here](https://python-poetry.org/docs/#installation) 
+- **Poetry** for Python package management - See [installation guide](https://python-poetry.org/docs/#installation) 
 - **Container system** (with Compose support):
     - [Docker](https://www.docker.com/)
     - [Rancher](https://www.rancher.com/) (For macOS, use VZ instead of QEMU)
     - [Podman](https://podman.io/) (Requires [Compose](https://podman-desktop.io/docs/compose/setting-up-compose) and rootful machine)
-- **LLM Provider** - external [WatsonX](https://www.ibm.com/watsonx) (OpenAI, Groq, ...) or local [Ollama](https://ollama.com)
+- **LLM Provider** - External [WatsonX](https://www.ibm.com/watsonx) (OpenAI, Groq, ...) or local [Ollama](https://ollama.com)
 - **IDE/Code Editor** (e.g., WebStorm, VSCode) - Optional but recommended for smooth smooth configuration handling
 
 ---
