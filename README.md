@@ -39,17 +39,24 @@ git clone https://github.com/i-am-bee/beeai-framework-py-starter.git
 cd beeai-framework-py-starter
 ```
 
-**Step two:** Install dependencies
+**Step two:** Create and activate a virtual environment
+```sh
+python -m venv .venv  
+source .venv/bin/activate
+```
+
+**Step three:** Install dependencies
 ```sh
 poetry install
 ```
 
-**Step three:** Install and start the poetry environment
+**Step four:** Install and start the poetry environment
 ```sh
-poetry self add poetry-plugin-shell && poetry shell
+poetry self add poetry-plugin-shell
+poetry shell
 ```
 
-**Step four:** Create an `.env` file with the contents from `.env.template`
+**Step five:** Create an `.env` file with the contents from `.env.template`
 
 > [!TIP] 
 > To run the examples below, [Ollama](https://ollama.com/) must be installed and running, with the llama3.1 model pulled.
