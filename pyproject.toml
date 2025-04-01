@@ -20,10 +20,9 @@ pydantic = "^2.10"
 termcolor = "^2.5"
 
 [tool.poetry.group.dev.dependencies]
-commitizen = "^4.2.1"
+mypy = "^1.15.0"
 poethepoet = "^0.32.2"
 ruff = "^0.9.6"
-mypy = "^1.15.0"
 
 [tool.mypy]
 mypy_path = "$MYPY_CONFIG_FILE_DIR/beeai_framework"
@@ -38,7 +37,7 @@ cmd = "poetry build"
 
 [tool.poe.tasks.commit]
 help = "Creates a commit"
-cmd = "cz commit -- --signoff"
+cmd = "git commit -- --signoff"
 
 [tool.poe.tasks.format]
 help = "Run all formating tools"
@@ -69,10 +68,6 @@ cmd = "ruff check ${FIX:+--fix} ${PY_FILES}"
 control.expr = "hook"
 args = ["hook", { name = "TARGET", positional = true, multiple = true }]
 default = "pass"
-
-    [[tool.poe.tasks.git.switch]]
-    case = "commit-msg"
-    shell = "cz check --allow-abort --commit-msg-file $TARGET"
 
     [[tool.poe.tasks.git.switch]]
     case = "pre-commit"
@@ -159,3 +154,5 @@ ban-relative-imports = "all"
 [[tool.mypy.overrides]]
 module = ["beeai_framework.*"]
 follow_untyped_imports = true
+
+

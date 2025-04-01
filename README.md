@@ -128,3 +128,7 @@ python beeai_framework_starter/agent_workflow.py
 ## 🎯 More examples
 
 For additional examples to try, check out the examples directory of BeeAI framework for Python repository [here](https://github.com/i-am-bee/beeai-framework/blob/main/python/examples).
+
+## Development
+
+If you are developing with this repository as a base, or updating this template, see additional information in [DEVELOP.md].
