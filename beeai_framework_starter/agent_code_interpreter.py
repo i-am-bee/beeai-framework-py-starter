@@ -3,12 +3,12 @@ import os
 import sys
 import traceback
 
-from beeai_framework import ReActAgent, UnconstrainedMemory
 from beeai_framework.agents import AgentExecutionConfig
-from beeai_framework.backend.chat import ChatModel
+from beeai_framework.agents.react import ReActAgent
+from beeai_framework.backend import ChatModel
 from beeai_framework.errors import FrameworkError
-from beeai_framework.tools.code import LocalPythonStorage, PythonTool
-from beeai_framework.tools.code.sandbox import SandboxTool
+from beeai_framework.memory import UnconstrainedMemory
+from beeai_framework.tools.code import LocalPythonStorage, PythonTool, SandboxTool
 from dotenv import load_dotenv
 
 from beeai_framework_starter.helpers.io import ConsoleReader

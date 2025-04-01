@@ -33,7 +33,7 @@ With the githooks installed the following will run automatically on a commit:
 
 * [ruff](https://github.com/astral-sh/ruff) is used to lint and format your code
 * [mypy](https://github.com/python/mypy) is used to check for type errors
-* a simple format check is applied to the commit message to verify for use of conventional commits
+* a simple format check is applied to the commit message to verify for use of [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 
 Additional tools are integrated into poetry via the [poetry plugin](https://poethepoet.natn.io/poetry_plugin.html)
 

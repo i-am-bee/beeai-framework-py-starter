@@ -3,12 +3,13 @@ import os
 import sys
 import traceback
 
-from beeai_framework import ReActAgent, TokenMemory
 from beeai_framework.agents import AgentExecutionConfig
-from beeai_framework.backend.chat import ChatModel
+from beeai_framework.agents.react import ReActAgent
+from beeai_framework.backend import ChatModel
 from beeai_framework.errors import FrameworkError
+from beeai_framework.memory import TokenMemory
 from beeai_framework.tools.search import DuckDuckGoSearchTool
-from beeai_framework.tools.weather.openmeteo import OpenMeteoTool
+from beeai_framework.tools.weather import OpenMeteoTool
 from dotenv import load_dotenv
 
 from beeai_framework_starter.helpers.io import ConsoleReader
