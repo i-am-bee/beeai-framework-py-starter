@@ -24,13 +24,9 @@ However, the repository has also been setup following some of the development pr
 include tools to make the development process easier and more efficient. These include the definition of tasks for
 checking and testing code.
 
-These are based on the definitions used in the  [BeeAI Framework repository](https://github.com/beeai-framework/beeai_framework). That repositories [python/CONTRIBUTING.md](https://github.com/i-am-bee/beeai-framework/blob/main/python/CONTRIBUTING.md) provides a more detailed guide to contributing to that project.
-
-Similar tooling is provided in this repository with the following differences:
-
-* This is not a monorepo, so some of the complexity of managing a mix of code in Python and Typescript does not apply
-* The `commitizen` plugin is not used
-* no copyright check is included
+These are based on the definitions used in the  [BeeAI Framework repository](https://github.com/beeai-framework/beeai_framework).
+That repositories [python/CONTRIBUTING.md](https://github.com/i-am-bee/beeai-framework/blob/main/python/CONTRIBUTING.md)
+provides a more detailed guide to contributing to that project, though not all features listed there are available in this repo.
 
 
 With the githooks installed the following will run automatically on a commit:
