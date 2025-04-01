@@ -37,7 +37,7 @@ cmd = "poetry build"
 
 [tool.poe.tasks.commit]
 help = "Creates a commit"
-cmd = "git commit -- --signoff"
+cmd = "git commit --signoff"
 
 [tool.poe.tasks.format]
 help = "Run all formating tools"
@@ -154,5 +154,3 @@ ban-relative-imports = "all"
 [[tool.mypy.overrides]]
 module = ["beeai_framework.*"]
 follow_untyped_imports = true
-
-
