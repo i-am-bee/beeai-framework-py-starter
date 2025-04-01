@@ -1,6 +1,6 @@
 # 🚀 BeeAI Framework Python Starter <img align="cener" alt="Project Status: Alpha" src="https://img.shields.io/badge/Status-Alpha-red">
 
-This starter template helps you **quickly** get started with the [BeeAI framework for Python](https://github.com/i-am-bee/beeai-framework/python)
+This starter template helps you **quickly** get started with the [BeeAI framework for Python](https://github.com/i-am-bee/beeai-framework/tree/main/python)
 
 ## 🌟 Key features
 
