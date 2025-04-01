@@ -39,7 +39,7 @@ With the githooks installed the following will run automatically on a commit:
 * [mypy](https://github.com/python/mypy) is used to check for type errors
 * a simple format check is applied to the commit message to verify for use of conventional commits
 
-Additional tools are integrated into poetry via the https://poethepoet.natn.io/poetry_plugin.html plugin
+Additional tools are integrated into poetry via the [poetry plugin](https://poethepoet.natn.io/poetry_plugin.html)
 
 Tools can also be run directly via the command line (run within `poetry shell` or prefix with `poetry run`):
 
