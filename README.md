@@ -23,8 +23,8 @@ This starter template helps you **quickly** get started with the [BeeAI framewor
 
 ## 📋 Requirements
 
-- **Python 3.11+**
-- **Poetry** for Python package management - See [installation guide](https://python-poetry.org/docs/#installation) 
+- **Python Version 3.11+**
+- **Poetry Version 2.0+** for Python package management - See [installation guide](https://python-poetry.org/docs/#installation) 
 - **Container system** (with Compose support):
     - [Docker](https://www.docker.com/)
     - [Rancher](https://www.rancher.com/) (For macOS, use VZ instead of QEMU)
