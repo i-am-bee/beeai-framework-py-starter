@@ -28,9 +28,7 @@ async def main() -> None:
 
     for prompt in reader:
         response = await agent.run(prompt).on("success", on_success)
-
         reader.write("Agent 🤖 : ", response.result.text)
-        break
 
 
 if __name__ == "__main__":
