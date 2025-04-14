@@ -1,3 +1,5 @@
+import sys
+
 from beeai_framework.utils.models import ModelLike, to_model_optional
 from pydantic import BaseModel
 from termcolor import colored
@@ -24,11 +26,15 @@ class ConsoleReader:
         try:
             while True:
                 prompt = input(colored(self.input, "cyan", attrs=["bold"])).strip()
+                if not sys.stdin.isatty():
+                    print(prompt)
 
                 if prompt == "q":
                     raise StopIteration
 
-                prompt = prompt if prompt else self.fallback
+                if not prompt:
+                    prompt = self.fallback
+                    self.write(self.input, prompt)
 
                 if not prompt and not self.allow_empty:
                     print("Error: Empty prompt is not allowed. Please try again.")
