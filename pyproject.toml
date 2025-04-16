@@ -7,17 +7,20 @@ authors = [{ name = "IBM Corp." }]
 maintainers = [
     { name = "Alex Bozarth", email = "ajbozart@us.ibm.com" },
 ]
-requires-python = ">=3.11,<4.0"
+requires-python = ">=3.11,<3.14"
 
 [project.urls]
 homepage = "https://github.com/i-am-bee/beeai-framework-py-starter#readme"
 repository = "https://github.com/i-am-bee/beeai-framework-py-starter"
 
 [tool.poetry.dependencies]
-python = ">= 3.11,<4.0"
-beeai_framework = {extras = ["duckduckgo", "mcp", "wikipedia"], version = "^0.1.16"}
+python = ">= 3.11,<3.14"
+beeai_framework = {extras = ["duckduckgo", "mcp", "wikipedia"], version = "0.1.15"}
 pydantic = "^2.10"
 termcolor = "^2.5"
+openinference-instrumentation-beeai = "^0.1.1"
+opentelemetry-sdk = "^1.31.1"
+opentelemetry-exporter-otlp = "^1.31.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.15.0"
