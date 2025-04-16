@@ -15,7 +15,7 @@ repository = "https://github.com/i-am-bee/beeai-framework-py-starter"
 
 [tool.poetry.dependencies]
 python = ">= 3.11,<4.0"
-beeai_framework = {extras = ["duckduckgo", "mcp", "wikipedia"], version = "^0.1.15"}
+beeai_framework = {extras = ["duckduckgo", "mcp", "wikipedia"], version = "^0.1.16"}
 pydantic = "^2.10"
 termcolor = "^2.5"
 
