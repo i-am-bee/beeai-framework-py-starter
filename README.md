@@ -68,6 +68,32 @@ poe infra --type start
 > [!NOTE]
 > beeai-code-interpreter runs on `http://127.0.0.1:50081`
 
+## 🔎 Observability
+
+Get complete visibility of the agent's inner workings via [OpenInference Instrumentation for BeeAI](https://github.com/Arize-ai/openinference/tree/main/python/instrumentation/openinference-instrumentation-beeai).
+
+> Be sure the [OpenInference Instrumentation for BeeAI](https://github.com/Arize-ai/openinference/tree/main/python/instrumentation/openinference-instrumentation-beeai) supports the newest [BeeAI framework](https://github.com/i-am-bee/beeai-framework/tree/main/python) before updating the framework version in this repository.
+
+### Instructions
+
+1. (Optional) In order to see spans in [Phoenix](https://github.com/Arize-ai/phoenix), begin running a Phoenix server. This can be done in one command using docker.
+
+```
+docker run -p 6006:6006 -i -t arizephoenix/phoenix
+```
+
+or via the command line:
+
+```
+brew install i-am-bee/beeai/arize-phoenix
+brew services start arize-phoenix
+```
+
+see https://docs.beeai.dev/observability/agents-traceability for more details.
+
+2. Run the agent `python beeai_framework_starter/agent_observe.py`
+3. You should see your spans exported in your console. If you've set up a locally running Phoenix server, head to [**localhost:6006**](http://localhost:6006/projects) to see your spans.
+
 ---
 
 ## 💡 Examples
