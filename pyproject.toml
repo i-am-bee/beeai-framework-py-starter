@@ -21,10 +21,10 @@ termcolor = "^2.5"
 openinference-instrumentation-beeai = "^0.1.1"
 opentelemetry-sdk = "^1.31.1"
 opentelemetry-exporter-otlp = "^1.31.1"
+poethepoet = "^0.32.2"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.15.0"
-poethepoet = "^0.32.2"
 ruff = "^0.9.6"
 
 [tool.mypy]
