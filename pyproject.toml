@@ -15,12 +15,12 @@ repository = "https://github.com/i-am-bee/beeai-framework-py-starter"
 
 [tool.poetry.dependencies]
 python = ">= 3.11,<3.14"
-beeai-framework = {extras = ["duckduckgo", "mcp", "wikipedia", "acp"], version = "0.1.19"}
+beeai-framework = {extras = ["duckduckgo", "mcp", "wikipedia", "acp"], version = "0.1.20"}
 pydantic = "^2.10"
 termcolor = "^2.5"
-openinference-instrumentation-beeai = "^0.1.1"
-opentelemetry-sdk = "^1.31.1"
-opentelemetry-exporter-otlp = "^1.31.1"
+openinference-instrumentation-beeai = "^0.1.6"
+opentelemetry-sdk = "^1.32.1"
+opentelemetry-exporter-otlp = "^1.32.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.15.0"
