@@ -55,9 +55,9 @@ poetry shell
 
 **Step 4:** Create an `.env` file with the contents from `.env.template`
 
-**Step 5:** [Ollama](https://ollama.com/) must be installed and running, with the llama3.1 model pulled.
+**Step 5:** [Ollama](https://ollama.com/) must be installed and running, with the granite3.3 model pulled.
 ```sh
-ollama pull llama3.1
+ollama pull granite3.3
 ```
 
 **Step 6:** Start all services related to [beeai-code-interpreter](https://github.com/i-am-bee/beeai-code-interpreter)
