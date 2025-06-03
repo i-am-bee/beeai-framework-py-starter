@@ -16,7 +16,7 @@ load_dotenv()
 
 
 async def main() -> None:
-    llm = ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:llama3.1"))
+    llm = ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3"))
     workflow = AgentWorkflow(name="Smart assistant")
 
     workflow.add_agent(
