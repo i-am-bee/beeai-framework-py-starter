@@ -5,8 +5,7 @@ license = "Apache-2.0"
 readme = "README.md"
 authors = [{ name = "IBM Corp." }]
 maintainers = [
-    { name = "Alex Bozarth", email = "ajbozart@us.ibm.com" },
-    { name = "Tomas Dvorak", email = "toomas2d@gmail.com" },
+    { name = "Tomas Dvorak", email = "toomas2d@gmail.com" }
 ]
 requires-python = ">=3.11,<3.14"
 
