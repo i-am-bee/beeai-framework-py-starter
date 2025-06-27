@@ -100,7 +100,7 @@ see https://docs.beeai.dev/observability/agents-traceability for more details.
  
 ### 🤖 Agent
 
-Now that you’ve set up your project, let’s run the agent example located at `/beeai_framework_starter/agent.py`.
+Now that you’ve set up your project, let’s run the agent example located at `/beeai_framework_starter/agent_react.py`.
 
 You have two options:
 
