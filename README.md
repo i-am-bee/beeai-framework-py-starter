@@ -100,18 +100,18 @@ see https://docs.beeai.dev/observability/agents-traceability for more details.
  
 ### 🤖 Agent
 
-Now that you’ve set up your project, let’s run the agent example located at `/beeai_framework_starter/agent.py`.
+Now that you’ve set up your project, let’s run the agent example located at `/beeai_framework_starter/agent_react.py`.
 
 You have two options:
 
 **Option 1:** Interactive mode
 ```sh
-python beeai_framework_starter/agent.py
+python beeai_framework_starter/agent_react.py
 ```
 
 **Option 2:** Define your prompt up front
 ```sh
-python beeai_framework_starter/agent.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
+python beeai_framework_starter/agent_react.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
 ```
 
 > [!NOTE]
