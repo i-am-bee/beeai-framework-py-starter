@@ -29,14 +29,14 @@ starlette = "*"
 
 [[package]]
 name = "acp-sdk"
-version = "0.12.3"
+version = "1.0.0"
 description = "Agent Communication Protocol SDK"
 optional = false
 python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "acp_sdk-0.12.3-py3-none-any.whl", hash = "sha256:6a42312eb48d0435ca46e346d2e18d843c602bfbb13f00d0c10e4dfc9e4392fa"},
-    {file = "acp_sdk-0.12.3.tar.gz", hash = "sha256:74be45333ecff7266c4009f426f7707e0596cf6d998b272dc2d81b2854bd2805"},
+    {file = "acp_sdk-1.0.0-py3-none-any.whl", hash = "sha256:837779e52f1f922f8c017b1e6a19181ef618fe996de971255cfd0251b9408180"},
+    {file = "acp_sdk-1.0.0.tar.gz", hash = "sha256:997351cc9042eb2cf3d1bd3f53997d8d5b83afd5ae975c32c419a86de7205ad5"},
 ]
 
 [package.dependencies]
@@ -286,19 +286,19 @@ tests-mypy = ["mypy (>=1.11.1) ; platform_python_implementation == \"CPython\" a
 
 [[package]]
 name = "beeai-framework"
-version = "0.1.27"
+version = "0.1.29"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "beeai_framework-0.1.27-py3-none-any.whl", hash = "sha256:c0b3aed5b05c0e6be6b43ecdf87d7948a2affdc52a13e6eb83299b8bc73ec5f1"},
-    {file = "beeai_framework-0.1.27.tar.gz", hash = "sha256:cce083f8b382f21fa6df6b75576be6cba4da1c795bbd5e72b9ef49d87b61046d"},
+    {file = "beeai_framework-0.1.29-py3-none-any.whl", hash = "sha256:ae07b62f36be6783e6b1cdb72f78f8acaae038a08b89a16cc777527a152529d9"},
+    {file = "beeai_framework-0.1.29.tar.gz", hash = "sha256:36604e6287e309eb4b99e17ddb5bc160f532844fb64af7bd5bfa2c43ad3635c2"},
 ]
 
 [package.dependencies]
 a2a-sdk = {version = ">=0.2.4,<0.3.0", optional = true, markers = "extra == \"a2a\" or extra == \"all\""}
-acp-sdk = {version = ">=0.12.2,<0.13.0", optional = true, markers = "extra == \"acp\" or extra == \"beeai-platform\" or extra == \"all\""}
+acp-sdk = {version = ">=1.0.0,<1.1.0", optional = true, markers = "extra == \"acp\" or extra == \"beeai-platform\" or extra == \"all\""}
 aiofiles = ">=24.1.0,<25.0.0"
 cachetools = ">=5.5.2,<6.0.0"
 chevron = ">=0.14.0,<0.15.0"
@@ -320,9 +320,9 @@ wikipedia-api = {version = ">=0.8.1,<0.9.0", optional = true, markers = "extra =
 
 [package.extras]
 a2a = ["a2a-sdk (>=0.2.4,<0.3.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-acp = ["acp-sdk (>=0.12.2,<0.13.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-all = ["a2a-sdk (>=0.2.4,<0.3.0)", "acp-sdk (>=0.12.2,<0.13.0)", "duckduckgo-search (>=8.0.4,<9.0.0)", "fastapi (>=0.115.0,<0.116.0)", "langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)", "mcp (>=1.2.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
-beeai-platform = ["acp-sdk (>=0.12.2,<0.13.0)", "uvicorn (>=0.34.2,<0.35.0)"]
+acp = ["acp-sdk (>=1.0.0,<1.1.0)", "uvicorn (>=0.34.2,<0.35.0)"]
+all = ["a2a-sdk (>=0.2.4,<0.3.0)", "acp-sdk (>=1.0.0,<1.1.0)", "duckduckgo-search (>=8.0.4,<9.0.0)", "fastapi (>=0.115.0,<0.116.0)", "langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)", "mcp (>=1.2.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+beeai-platform = ["acp-sdk (>=1.0.0,<1.1.0)", "uvicorn (>=0.34.2,<0.35.0)"]
 duckduckgo = ["duckduckgo-search (>=8.0.4,<9.0.0)"]
 langchain = ["langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)"]
 mcp = ["mcp (>=1.2.0,<2.0.0)"]
@@ -5128,4 +5128,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">= 3.11,<3.14"
-content-hash = "62fde769fad1c0540236c750a4e49ec2da1f01fc2f052e29fa63507f0010e5df"
+content-hash = "f407d8a47bcaa3ac29a3c712f5d5a78831fdf1092fe4a6b99ce2740a39d85ee7"
