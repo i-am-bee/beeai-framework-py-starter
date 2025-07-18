@@ -292,14 +292,14 @@ tests-mypy = ["mypy (>=1.11.1) ; platform_python_implementation == \"CPython\" a
 
 [[package]]
 name = "beeai-framework"
-version = "0.1.30"
+version = "0.1.31"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "beeai_framework-0.1.30-py3-none-any.whl", hash = "sha256:a8c8d171477ace471e4a9bb16701dff919705945bcbc0bc12e892da9afdc3c95"},
-    {file = "beeai_framework-0.1.30.tar.gz", hash = "sha256:e27302268d41741ebef08ba0411b98dd3322b21dae2d79f33b293c57509129b8"},
+    {file = "beeai_framework-0.1.31-py3-none-any.whl", hash = "sha256:10cb7d2be9ffe4c0f1487625ac82c6a15673e9d3ce02c2bc7910c2249d7f7df2"},
+    {file = "beeai_framework-0.1.31.tar.gz", hash = "sha256:20a912549715546a0fba4711916db8d2b0d0ae6420283f9f64b6ba1e380cb131"},
 ]
 
 [package.dependencies]
@@ -308,7 +308,7 @@ acp-sdk = {version = ">=1.0.0,<2.0.0", optional = true, markers = "extra == \"ac
 aiofiles = ">=24.1.0,<25.0.0"
 cachetools = ">=5.5.2,<6.0.0"
 chevron = ">=0.14.0,<0.15.0"
-duckduckgo-search = {version = ">=8.0.5", optional = true, markers = "extra == \"search\" or extra == \"duckduckgo\" or extra == \"all\""}
+ddgs = {version = ">=9.3.1,<10.0.0", optional = true, markers = "extra == \"search\" or extra == \"duckduckgo\" or extra == \"all\""}
 fastapi = {version = ">=0.115.0,<0.116.0", optional = true, markers = "extra == \"watsonx-orchestrate\" or extra == \"all\""}
 json-repair = ">=0.39.0,<0.40.0"
 jsonref = ">=1.1.0,<2.0.0"
@@ -327,12 +327,12 @@ wikipedia-api = {version = ">=0.8.1,<0.9.0", optional = true, markers = "extra =
 [package.extras]
 a2a = ["a2a-sdk (>=0.2.11,<0.3.0)", "uvicorn (>=0.34.2,<0.35.0)"]
 acp = ["acp-sdk (>=1.0.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-all = ["a2a-sdk (>=0.2.11,<0.3.0)", "acp-sdk (>=1.0.0,<2.0.0)", "duckduckgo-search (>=8.0.5)", "fastapi (>=0.115.0,<0.116.0)", "langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)", "mcp (>=1.10.1,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+all = ["a2a-sdk (>=0.2.11,<0.3.0)", "acp-sdk (>=1.0.0,<2.0.0)", "ddgs (>=9.3.1,<10.0.0)", "fastapi (>=0.115.0,<0.116.0)", "langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)", "mcp (>=1.10.1,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
 beeai-platform = ["acp-sdk (>=1.0.0,<2.0.0)", "uvicorn (>=0.34.2,<0.35.0)"]
-duckduckgo = ["duckduckgo-search (>=8.0.5)"]
+duckduckgo = ["ddgs (>=9.3.1,<10.0.0)"]
 langchain = ["langchain-community (>=0.3.19,<0.4.0)", "langchain-core (>=0.3.41,<0.4.0)", "langchain-ollama (>=0.3.1,<0.4.0)", "langgraph (>=0.3.27,<0.4.0)"]
 mcp = ["mcp (>=1.10.1,<2.0.0)"]
-search = ["duckduckgo-search (>=8.0.5)", "wikipedia-api (>=0.8.1,<0.9.0)"]
+search = ["ddgs (>=9.3.1,<10.0.0)", "wikipedia-api (>=0.8.1,<0.9.0)"]
 watsonx-orchestrate = ["fastapi (>=0.115.0,<0.116.0)", "uvicorn (>=0.34.2,<0.35.0)"]
 wikipedia = ["wikipedia-api (>=0.8.1,<0.9.0)"]
 
@@ -600,6 +600,26 @@ marshmallow = ">=3.18.0,<4.0.0"
 typing-inspect = ">=0.4.0,<1"
 
 [[package]]
+name = "ddgs"
+version = "9.3.1"
+description = "Dux Distributed Global Search. A metasearch library that aggregates results from diverse web search services."
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "ddgs-9.3.1-py3-none-any.whl", hash = "sha256:4ea4e23a44c0b9e37743d5fdb9dcda208dd0debb2e4d096bb9f6a7acbfefc511"},
+    {file = "ddgs-9.3.1.tar.gz", hash = "sha256:5ce50ff00579439812ca1983dba4600a878143409ed9ffd8cd097adb0a31777c"},
+]
+
+[package.dependencies]
+click = ">=8.1.8"
+lxml = ">=5.3.0"
+primp = ">=0.15.0"
+
+[package.extras]
+dev = ["mypy (>=1.14.1)", "pytest (>=8.3.4)", "pytest-dependency (>=0.6.0)", "ruff (>=0.9.2)"]
+
+[[package]]
 name = "distro"
 version = "1.9.0"
 description = "Distro - an OS platform information API"
@@ -631,26 +651,6 @@ doq = ["aioquic (>=1.0.0)"]
 idna = ["idna (>=3.7)"]
 trio = ["trio (>=0.23)"]
 wmi = ["wmi (>=1.5.1)"]
-
-[[package]]
-name = "duckduckgo-search"
-version = "8.1.1"
-description = "Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine."
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "duckduckgo_search-8.1.1-py3-none-any.whl", hash = "sha256:f48adbb06626ee05918f7e0cef3a45639e9939805c4fc179e68c48a12f1b5062"},
-    {file = "duckduckgo_search-8.1.1.tar.gz", hash = "sha256:9da91c9eb26a17e016ea1da26235d40404b46b0565ea86d75a9f78cc9441f935"},
-]
-
-[package.dependencies]
-click = ">=8.1.8"
-lxml = ">=5.3.0"
-primp = ">=0.15.0"
-
-[package.extras]
-dev = ["mypy (>=1.14.1)", "pytest (>=8.3.4)", "pytest-dependency (>=0.6.0)", "ruff (>=0.9.2)"]
 
 [[package]]
 name = "email-validator"
@@ -5134,4 +5134,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">= 3.11,<3.14"
-content-hash = "e9b9ade172124c37e973c7b78ff8d5aa873c555ba704d9b97cbb1aeae2b9b9d0"
+content-hash = "a6007a21980f6407368559ed258bb219cba05b1398325ed83e3b306ac0608eb4"
