@@ -14,14 +14,10 @@ from beeai_framework.tools.think import ThinkTool
 from beeai_framework.tools.tool import Tool
 from beeai_framework.tools.weather import OpenMeteoTool
 from dotenv import load_dotenv
-from helpers.instrumentation import setup_observability
 
 from beeai_framework_starter.helpers.io import ConsoleReader
 
 load_dotenv()
-
-# Enable OpenTelemetry integration
-setup_observability("http://localhost:6006/v1/traces")
 
 
 async def main() -> None:
