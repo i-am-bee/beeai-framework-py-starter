@@ -14,8 +14,8 @@ from beeai_framework.tools.think import ThinkTool
 from beeai_framework.tools.tool import Tool
 from beeai_framework.tools.weather import OpenMeteoTool
 from dotenv import load_dotenv
-from beeai_framework_starter.helpers.instrumentation import setup_observability
 
+from beeai_framework_starter.helpers.instrumentation import setup_observability
 from beeai_framework_starter.helpers.io import ConsoleReader
 
 load_dotenv()
