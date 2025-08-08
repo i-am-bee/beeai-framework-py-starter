@@ -106,12 +106,12 @@ You have two options:
 
 **Option 1:** Interactive mode
 ```sh
-python beeai_framework_starter/agent_react.py
+python beeai_framework_starter/agent.py
 ```
 
 **Option 2:** Define your prompt up front
 ```sh
-python beeai_framework_starter/agent_react.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
+python beeai_framework_starter/agent.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
 ```
 
 > [!NOTE]
