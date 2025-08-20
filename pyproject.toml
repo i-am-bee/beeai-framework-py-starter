@@ -16,7 +16,7 @@ repository = "https://github.com/i-am-bee/beeai-framework-py-starter"
 [tool.poetry.dependencies]
 python = ">= 3.11,<3.14"
 beeai-framework = {extras = ["all"], version = "^0.1.36"}
-openinference-instrumentation-beeai = "^0.1.7"
+openinference-instrumentation-beeai = "^0.1.8"
 opentelemetry-exporter-otlp = "^1.36.0"
 opentelemetry-sdk = "^1.36.0"
 termcolor = "^2.5"
