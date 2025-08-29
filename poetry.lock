@@ -381,14 +381,14 @@ lxml = ["lxml"]
 
 [[package]]
 name = "beeai-framework"
-version = "0.1.38"
+version = "0.1.40"
 description = ""
 optional = false
 python-versions = "<4.0,>=3.11"
 groups = ["main"]
 files = [
-    {file = "beeai_framework-0.1.38-py3-none-any.whl", hash = "sha256:f73e0cb23c9c722f475c83149d24615c60d8688fe0e575d4127f8320900d5547"},
-    {file = "beeai_framework-0.1.38.tar.gz", hash = "sha256:45b968787ddd7777286e7d8389f238dd0c0f3119bd0a88c8c04eac8a8fb3a60f"},
+    {file = "beeai_framework-0.1.40-py3-none-any.whl", hash = "sha256:753dcb69164acc23592024866ef816f6dc7caaf442d95ae2648f9c10a7dfe1db"},
+    {file = "beeai_framework-0.1.40.tar.gz", hash = "sha256:3bec698e7b6b1a28decf2dbaee467d4557106835d305f9c17346522e5942a39e"},
 ]
 
 [package.dependencies]
@@ -6007,4 +6007,4 @@ cffi = ["cffi (>=1.17) ; python_version >= \"3.13\" and platform_python_implemen
 [metadata]
 lock-version = "2.1"
 python-versions = ">= 3.11,<3.14"
-content-hash = "4ff0d0eb00847c480159c3dd7604ceeef90ce81c5342f46dd9a71514a4d86b60"
+content-hash = "1b5c14a66d65297ec0c1c13682de7148fa157ad8ae064c9c4a1abddf95ed53c3"
