@@ -2989,14 +2989,14 @@ test = ["jsonschema", "openai", "pydantic (>=2.0.0)", "pytest-asyncio", "pytest-
 
 [[package]]
 name = "openinference-instrumentation-beeai"
-version = "0.1.9"
+version = "0.1.10"
 description = "OpenInference BeeAI Instrumentation"
 optional = false
 python-versions = "<3.14,>=3.11"
 groups = ["main"]
 files = [
-    {file = "openinference_instrumentation_beeai-0.1.9-py3-none-any.whl", hash = "sha256:2796b9ad40dd3c161b9a73220d4a4a927dfe72fb82427bfa4ee1c99791844986"},
-    {file = "openinference_instrumentation_beeai-0.1.9.tar.gz", hash = "sha256:61e9d376b5501557b4b73370646c5b98f809320a55a74791b7c56702b19d8ced"},
+    {file = "openinference_instrumentation_beeai-0.1.10-py3-none-any.whl", hash = "sha256:de9a0dce025fe4aa368203bf67082958eb8553a736f44fd5ee367b296e6b7bdc"},
+    {file = "openinference_instrumentation_beeai-0.1.10.tar.gz", hash = "sha256:5ee6695cdd22429bd82241f0b6c3dcc7d9703fc425d8e2134a2ef3c5c5762faa"},
 ]
 
 [package.dependencies]
@@ -6007,4 +6007,4 @@ cffi = ["cffi (>=1.17) ; python_version >= \"3.13\" and platform_python_implemen
 [metadata]
 lock-version = "2.1"
 python-versions = ">= 3.11,<3.14"
-content-hash = "1b5c14a66d65297ec0c1c13682de7148fa157ad8ae064c9c4a1abddf95ed53c3"
+content-hash = "a2f6bb73ccf53e7d9b861b4ee97d6f06bcc2ed24f0763d4d8c058ef265ce6121"
