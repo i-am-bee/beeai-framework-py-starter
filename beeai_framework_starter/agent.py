@@ -3,7 +3,6 @@ import os
 import sys
 import traceback
 
-from beeai_framework.agents import AgentExecutionConfig
 from beeai_framework.agents.experimental import RequirementAgent
 from beeai_framework.agents.experimental.requirements.conditional import ConditionalRequirement
 from beeai_framework.backend import ChatModel
@@ -38,11 +37,9 @@ async def main() -> None:
     reader = ConsoleReader({"fallback": "What to do in Boston?"})
 
     for prompt in reader:
-        response = await agent.run(
-            prompt, execution=AgentExecutionConfig(max_iterations=8, max_retries_per_step=3, total_max_retries=10)
-        )
+        response = await agent.run(prompt, max_iterations=8, max_retries_per_step=3, total_max_retries=10)
 
-        reader.write("Agent 🤖 : ", response.result.text)
+        reader.write("Agent 🤖 : ", response.last_message.text)
 
 
 if __name__ == "__main__":
