@@ -24,13 +24,13 @@ This starter template helps you **quickly** get started with the [BeeAI framewor
 ## 📋 Requirements
 
 - **Python Version 3.11+**
-- **Poetry Version 2.0+** for Python package management - See [installation guide](https://python-poetry.org/docs/#installation) 
+- **uv** (fast Python package manager) - See installation: https://docs.astral.sh/uv/getting-started/installation/
 - **Container system** (with Compose support):
     - [Docker](https://www.docker.com/)
     - [Rancher](https://www.rancher.com/) (For macOS, use VZ instead of QEMU)
     - [Podman](https://podman.io/) (Requires [Compose](https://podman-desktop.io/docs/compose/setting-up-compose) and rootful machine)
 - **LLM Provider** - External [WatsonX](https://www.ibm.com/watsonx) (OpenAI, Groq, ...) or local [Ollama](https://ollama.com)
-- **IDE/Code Editor** (e.g., WebStorm, VSCode) - Optional but recommended for smooth smooth configuration handling
+- **IDE/Code Editor** (e.g., WebStorm, VSCode) - Optional but recommended for smooth configuration handling
 
 ---
 
@@ -44,25 +44,19 @@ cd beeai-framework-py-starter
 
 **Step 2:** Install dependencies
 ```sh
-poetry install
+uv sync
 ```
 
-**Step 3:** Install and start the poetry environment
-```sh
-poetry self add poetry-plugin-shell
-poetry shell
-```
+**Step 3:** Create an `.env` file with the contents from `.env.template`
 
-**Step 4:** Create an `.env` file with the contents from `.env.template`
-
-**Step 5:** [Ollama](https://ollama.com/) must be installed and running, with the granite3.3 model pulled.
+**Step 4:** [Ollama](https://ollama.com/) must be installed and running, with the granite3.3 model pulled.
 ```sh
 ollama pull granite3.3
 ```
 
-**Step 6:** Start all services related to [beeai-code-interpreter](https://github.com/i-am-bee/beeai-code-interpreter)
+**Step 5:** Start all services related to [beeai-code-interpreter](https://github.com/i-am-bee/beeai-code-interpreter)
 ```sh
-poe infra --type start
+uv run poe infra --type start
 ```
 
 > [!NOTE]
@@ -76,20 +70,11 @@ Get complete visibility of the agent's inner workings via [OpenInference Instrum
 
 ### Instructions
 
-1. (Optional) In order to see spans in [Phoenix](https://github.com/Arize-ai/phoenix), begin running a Phoenix server. This can be done in one command using docker.
+1. In order to see spans in [Phoenix](https://github.com/Arize-ai/phoenix), begin running a Phoenix server. This can be done in one command using docker.
 
 ```
-docker run -p 6006:6006 -i -t arizephoenix/phoenix
+docker run -p 6006:6006 -i -t arizephoenix/phoenix:latest
 ```
-
-or via the command line:
-
-```
-brew install i-am-bee/beeai/arize-phoenix
-brew services start arize-phoenix
-```
-
-see https://docs.beeai.dev/observability/agents-traceability for more details.
 
 2. Run the agent `python beeai_framework_starter/agent_observe.py`
 3. You should see your spans exported in your console. If you've set up a locally running Phoenix server, head to [**localhost:6006**](http://localhost:6006/projects) to see your spans.
@@ -100,22 +85,22 @@ see https://docs.beeai.dev/observability/agents-traceability for more details.
  
 ### 🤖 Agent
 
-Now that you’ve set up your project, let’s run the agent example located at `/beeai_framework_starter/agent_react.py`.
+Now that you’ve set up your project, let’s run the agent example.
 
 You have two options:
 
 **Option 1:** Interactive mode
 ```sh
-python beeai_framework_starter/agent.py
+uv run python beeai_framework_starter/agent.py
 ```
 
 **Option 2:** Define your prompt up front
 ```sh
-python beeai_framework_starter/agent.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
+uv run python beeai_framework_starter/agent.py <<< "I am going out tomorrow morning to walk around Boston. What should I plan to wear?"
 ```
 
 > [!NOTE]
-> Notice this prompts triggers the agent to call a tool.
+> Notice that this prompt triggers the agent to call a tool.
 
 ---
 
@@ -123,14 +108,15 @@ python beeai_framework_starter/agent.py <<< "I am going out tomorrow morning to 
 
 Now let's run the code interpreter agent example located at `/beeai_framework_starter/agent_code_interpreter.py`.
 
-Try the `Python Tool` and ask the agent to perform a complex calculation:
+Try the `PythonTool` and ask the agent to perform a complex calculation:
 ```sh
-python beeai_framework_starter/agent_code_interpreter.py <<< "Calculate 534*342?"
+uv run python beeai_framework_starter/agent_code_interpreter.py <<< "Calculate 534*342?"
 ```
 
-Try the `SandBox tool` and run a custom Python function `get_riddle()`:
+Try the `SandboxTool` and run a custom Python function `get_riddle()`:
+
 ```sh
-python beeai_framework_starter/agent_code_interpreter.py <<< "Generate a riddle"
+uv run python beeai_framework_starter/agent_code_interpreter.py <<< "Generate a riddle"
 ```
 
 ---
@@ -140,13 +126,15 @@ python beeai_framework_starter/agent_code_interpreter.py <<< "Generate a riddle"
 This example demonstrates a **multi-agent workflow** where different agents work together to provide a comprehensive understanding of a location.
 
 The workflow includes three agents:
+
 1. **Researcher:** Gathers information about the location using the Wikipedia tool.
 2. **WeatherForecaster:** Retrieves and reports weather details using the OpenMeteo API.
 3. **DataSynthesizer:** Combines the historical and weather data into a final summary.
 
 To run the workflow:
+
 ```sh
-python beeai_framework_starter/agent_workflow.py
+uv run python beeai_framework_starter/agent_workflow.py
 ```
 
 ---
@@ -157,4 +145,4 @@ For additional examples to try, check out the examples directory of BeeAI framew
 
 ## Development
 
-If you are developing with this repository as a base, or updating this template, see additional information in [DEVELOP.md].
+If you are developing with this repository as a base, or updating this template, see additional information in [./DEVELOP.md].

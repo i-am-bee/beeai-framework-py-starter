@@ -8,23 +8,25 @@ maintainers = [
     { name = "Tomas Dvorak", email = "toomas2d@gmail.com" }
 ]
 requires-python = ">=3.11,<3.14"
+dependencies = [
+    "beeai-framework[all]>=0.1.44,<0.2.0",
+    "openinference-instrumentation-beeai>=0.1.10,<0.2.0",
+    "opentelemetry-exporter-otlp>=1.36.0,<2.0.0",
+    "opentelemetry-sdk>=1.36.0,<2.0.0",
+    "termcolor>=2.5,<3.0",
+]
 
 [project.urls]
 homepage = "https://github.com/i-am-bee/beeai-framework-py-starter#readme"
 repository = "https://github.com/i-am-bee/beeai-framework-py-starter"
 
-[tool.poetry.dependencies]
-python = ">= 3.11,<3.14"
-beeai-framework = {extras = ["all"], version = "^0.1.42"}
-openinference-instrumentation-beeai = "^0.1.10"
-opentelemetry-exporter-otlp = "^1.36.0"
-opentelemetry-sdk = "^1.36.0"
-termcolor = "^2.5"
 
-[tool.poetry.group.dev.dependencies]
-mypy = "^1.15.0"
-poethepoet = "^0.32.2"
-ruff = "^0.9.6"
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0,<2.0.0",
+    "poethepoet>=0.32.2,<0.33.0",
+    "ruff>=0.9.6,<0.10.0",
+]
 
 [tool.mypy]
 mypy_path = "$MYPY_CONFIG_FILE_DIR/beeai_framework"
@@ -35,7 +37,7 @@ strict = true
 
 [tool.poe.tasks.build]
 help = "Build a package"
-cmd = "poetry build"
+cmd = "uv build"
 
 [tool.poe.tasks.commit]
 help = "Creates a commit"
@@ -116,8 +118,8 @@ uses = { PY_FILES = "_match_files --ext py $TARGET" }
 cmd = "mypy ${PY_FILES:-.} ${POE_ARGS}"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
 
 [tool.ruff]
 lint.select = [
@@ -137,10 +139,10 @@ lint.select = [
     "TID",   # tidy-imports
     "ASYNC", # async
 ]
-force-exclude = true
 lint.ignore = ["ANN401", "B904"]
 lint.fixable = ["ALL"]
 lint.unfixable = []
+force-exclude = true
 line-length = 120
 
 [tool.ruff.lint.per-file-ignores]
