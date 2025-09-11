@@ -35,9 +35,9 @@ With the githooks installed the following will run automatically on a commit:
 * [mypy](https://github.com/python/mypy) is used to check for type errors
 * a simple format check is applied to the commit message to verify for use of [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 
-Additional tools are integrated into poetry via the [poetry plugin](https://poethepoet.natn.io/poetry_plugin.html)
+Additional tools are provided via [Poe the Poet](https://github.com/nat-n/poethepoet) tasks and can be run with uv.
 
-Tools can also be run directly via the command line (run within `poetry shell` or prefix with `poetry run`):
+Tools can be run directly via the command line (activate the venv or prefix commands with `uv run`):
 
 * `poe lint` - lints and formats your code
 * `poe format` - formats your code
