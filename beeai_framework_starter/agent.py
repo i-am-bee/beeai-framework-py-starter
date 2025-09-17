@@ -21,7 +21,7 @@ load_dotenv()
 
 async def main() -> None:
     agent = RequirementAgent(
-        llm=ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3")),
+        llm=ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3:8b")),
         tools=[ThinkTool(), OpenMeteoTool(), DuckDuckGoSearchTool()],
         instructions="Plan activities for a given destination based on current weather and events.",
         requirements=[
