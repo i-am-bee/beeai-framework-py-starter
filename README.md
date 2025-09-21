@@ -49,9 +49,9 @@ uv sync
 
 **Step 3:** Create an `.env` file with the contents from `.env.template`
 
-**Step 4:** [Ollama](https://ollama.com/) must be installed and running, with the granite3.3 model pulled.
+**Step 4:** [Ollama](https://ollama.com/) must be installed and running, with the granite3.3:8b model pulled.
 ```sh
-ollama pull granite3.3
+ollama pull granite3.3:8b
 ```
 
 **Step 5:** Start all services related to [beeai-code-interpreter](https://github.com/i-am-bee/beeai-code-interpreter)
@@ -85,7 +85,8 @@ docker run -p 6006:6006 -i -t arizephoenix/phoenix:latest
  
 ### 🤖 Agent
 
-Now that you’ve set up your project, let’s run the agent example.
+Now that you’ve set up your project, let’s run the agent example. To exit the conversation, type "q" and press enter.
+
 
 You have two options:
 
@@ -100,7 +101,7 @@ uv run python beeai_framework_starter/agent.py <<< "I am going out tomorrow morn
 ```
 
 > [!NOTE]
-> Notice that this prompt triggers the agent to call a tool.
+> Notice that this prompt triggers the agent to call a tool. 
 
 ---
 

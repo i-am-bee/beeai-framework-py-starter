@@ -20,7 +20,7 @@ async def main() -> None:
 
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
-    llm = ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3"))
+    llm = ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3:8b"))
 
     python_tool = PythonTool(
         code_interpreter_url=code_interpreter_url,
