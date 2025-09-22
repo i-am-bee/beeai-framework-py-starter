@@ -278,7 +278,7 @@ wheels = [
 
 [[package]]
 name = "beeai-framework"
-version = "0.1.47"
+version = "0.1.49"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiofiles" },
@@ -292,9 +292,9 @@ dependencies = [
     { name = "pydantic-settings" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/15/2f/d90dc552fed71e837bd5cc2c57892f2365364d6b041efdeab2bf7863dea7/beeai_framework-0.1.47.tar.gz", hash = "sha256:cedf37ca5acd7236b988f1220d036bd06255a632aa2d752f18a28f3d00cb08c6", size = 143084, upload-time = "2025-09-19T12:13:24.425Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/01/d672e7f3a97b39a7fb7d56e199f76c9cbb8b9b5f133d90292ac7ba83d905/beeai_framework-0.1.49.tar.gz", hash = "sha256:014e1450522bc400f8315d0970c18abbc995c7ccd8a3138713f6127e0824966c", size = 144800, upload-time = "2025-09-22T15:38:34.183Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/fc/ce0655c1cc0ca095efb9cb19d61641865de4cb8d0221f3858f1e0e903f03/beeai_framework-0.1.47-py3-none-any.whl", hash = "sha256:aaf35c26bf41720eb99aca10bdeaa8cd660444ac40593ba73e635727670fb6f8", size = 262532, upload-time = "2025-09-19T12:13:23.191Z" },
+    { url = "https://files.pythonhosted.org/packages/c7/ef/64774319a23af8ece0367c49c5a724261d014d706a6dbc1405373e24cf3b/beeai_framework-0.1.49-py3-none-any.whl", hash = "sha256:349808e41ca76e5a6d1c7bfd46166fffdc7e54af7061ae689d88408a2060151b", size = 266296, upload-time = "2025-09-22T15:38:32.928Z" },
 ]
 
 [package.optional-dependencies]
@@ -337,7 +337,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "beeai-framework", extras = ["all"], specifier = ">=0.1.47,<0.2.0" },
+    { name = "beeai-framework", extras = ["all"], specifier = ">=0.1.49,<0.2.0" },
     { name = "openinference-instrumentation-beeai", specifier = ">=0.1.10,<0.2.0" },
     { name = "opentelemetry-exporter-otlp", specifier = ">=1.36.0,<2.0.0" },
     { name = "opentelemetry-sdk", specifier = ">=1.36.0,<2.0.0" },
@@ -353,7 +353,7 @@ dev = [
 
 [[package]]
 name = "beeai-sdk"
-version = "0.3.3"
+version = "0.3.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "a2a-sdk" },
@@ -373,9 +373,9 @@ dependencies = [
     { name = "tenacity" },
     { name = "uvicorn" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d8/14/23dd0565e6cfc16717779d0b8c0d8a3e432e966b1425ced25ac36b081deb/beeai_sdk-0.3.3.tar.gz", hash = "sha256:65967ff78cbcd17709be5996e4956d417b531a3d996bd5c79db45d4aebc3f9d1", size = 30021, upload-time = "2025-09-08T16:41:36.696Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/64/bf/ce0df811a883007d7e2875660379bae0f5d0db8b26b48190767f56802beb/beeai_sdk-0.3.4.tar.gz", hash = "sha256:744b7c12e364e5e190e47aa3b6c4c76b56846e51f2a6e89b5938d3621de7faf3", size = 33313, upload-time = "2025-09-19T08:24:50.524Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e9/1e/346d882c78a3b49dee69f2c5fbb44638c68aa13c1b630708d24ecaeaac23/beeai_sdk-0.3.3-py3-none-any.whl", hash = "sha256:e4790f09bf6cec5c747c5b6cf6712fe7dd11ea7973295f8cfc1605ead7d345f0", size = 51378, upload-time = "2025-09-08T16:41:35.532Z" },
+    { url = "https://files.pythonhosted.org/packages/01/8d/83c127805fbe8d38e2c644def66cf52eea293aac5c6b7c442584df06c3e1/beeai_sdk-0.3.4-py3-none-any.whl", hash = "sha256:7ac7aab58341f48c998541966712c13d13b50c27e861c01ec0dd7db31c7f3f2a", size = 58167, upload-time = "2025-09-19T08:24:49.133Z" },
 ]
 
 [[package]]
