@@ -7,7 +7,7 @@ from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
 from beeai_framework.tools import Tool
 from beeai_framework.tools.mcp import MCPTool
 from dotenv import load_dotenv
-from mcp import StdioServerParameters, stdio_client
+from mcp_protocol import StdioServerParameters, stdio_client
 
 load_dotenv()
 
