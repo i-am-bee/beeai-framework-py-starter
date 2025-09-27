@@ -6,7 +6,7 @@ from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
 from beeai_framework.tools import Tool
 from beeai_framework.tools.mcp import MCPTool
 from dotenv import load_dotenv
-from mcp_protocol.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamablehttp_client
 
 load_dotenv()
 
