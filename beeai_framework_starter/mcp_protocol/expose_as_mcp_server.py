@@ -37,7 +37,7 @@ def mcp_server() -> None:
 
 
 async def mcp_client() -> None:
-    [agent_tool] = await MCPTool.from_client(streamablehttp_client("http://127.0.0.1:7777/mcp"))
+    [agent_tool] = await MCPTool.from_client(streamablehttp_client("http://127.0.0.1:7777/mcp"))  # type: ignore
     prompt = "What's the current weather in Berlin?"
     print(f"User: {prompt}")
     response = await agent_tool.run({"input": prompt})
@@ -54,7 +54,7 @@ if __name__ == "__main__":
             done, _ = wait([f1, f2], return_when=FIRST_COMPLETED)
             for f in done:
                 if f.exception():
-                    raise f.exception()
+                    raise f.exception()  # type: ignore
         except Exception as e:
             traceback.print_exc()
             sys.exit(str(e))

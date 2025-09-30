@@ -12,7 +12,7 @@ load_dotenv()
 
 
 async def main() -> None:
-    mcp_tools = await MCPTool.from_client(streamablehttp_client("https://remote.mcpservers.org/fetch/mcp"))
+    mcp_tools = await MCPTool.from_client(streamablehttp_client("https://remote.mcpservers.org/fetch/mcp"))  # type: ignore
 
     agent = RequirementAgent(
         llm=ChatModel.from_name("ollama:granite3.3:8b"),
