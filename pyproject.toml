@@ -9,9 +9,9 @@ maintainers = [
 ]
 requires-python = ">=3.11,<3.14"
 dependencies = [
-    "beeai-framework[all]>=0.1.76,<0.2.0",
+    "beeai-framework[all]>=0.1.77,<0.2.0",
     "ddgs>=9.9.1",
-    "openinference-instrumentation-beeai>=0.1.14,<0.2.0",
+    "openinference-instrumentation-beeai>=0.1.15,<0.2.0",
     "opentelemetry-exporter-otlp>=1.36.0,<2.0.0",
     "opentelemetry-sdk>=1.36.0,<2.0.0",
     "termcolor>=2.5,<3.0",
