@@ -1,6 +1,7 @@
 # AMD GPU Setup (ROCm)
 
-This project is configured to run on an AMD RX 9060 XT (gfx1200, RDNA 4) using ROCm 6.4.
+This project is configured to run on an AMD RX 9060 XT (gfx1200, RDNA 4) using ROCm 6.4,
+with Python 3.13.
 
 ## The problem with `uv sync` alone
 
