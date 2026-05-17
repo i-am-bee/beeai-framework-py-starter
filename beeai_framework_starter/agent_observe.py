@@ -20,7 +20,7 @@ from beeai_framework_starter.helpers.io import ConsoleReader
 load_dotenv()
 
 # Enable OpenTelemetry integration
-setup_observability("http://localhost:6006/v1/traces")
+setup_observability(os.getenv("PHOENIX_COLLECTOR_ENDPOINT", "http://localhost:6006/v1/traces"))
 
 
 async def main() -> None:

@@ -2,6 +2,7 @@ import asyncio
 import os
 import sys
 import traceback
+from datetime import date
 
 from beeai_framework.agents.requirement import RequirementAgent
 from beeai_framework.agents.requirement.requirements.conditional import ConditionalRequirement
@@ -23,11 +24,11 @@ async def main() -> None:
     agent = RequirementAgent(
         llm=ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3:8b")),
         tools=[ThinkTool(), OpenMeteoTool(), DuckDuckGoSearchTool()],
-        instructions="Plan activities for a given destination based on current weather and events.",
+        instructions=f"Today's date is {date.today().isoformat()}. Plan activities for a given destination based on current weather and events.",
         requirements=[
             ConditionalRequirement(ThinkTool, force_at_step=1, max_invocations=3),
             ConditionalRequirement(
-                DuckDuckGoSearchTool, only_after=[OpenMeteoTool], min_invocations=1, max_invocations=2
+                DuckDuckGoSearchTool, only_after=[OpenMeteoTool], min_invocations=0, max_invocations=2
             ),
         ],
         # Log intermediate steps to the console

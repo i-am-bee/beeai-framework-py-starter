@@ -40,6 +40,14 @@ strict = true
 help = "Build a package"
 cmd = "uv build"
 
+[tool.poe.tasks.install-amd]
+help = "Replace CUDA torch with ROCm 6.4 build for AMD GPU (run after uv sync)"
+sequence = [
+  { cmd = "uv pip install torch==2.9.1+rocm6.4 --index https://download.pytorch.org/whl/rocm6.4" },
+  { cmd = "uv pip install pytorch-triton-rocm==3.5.1 --index https://download.pytorch.org/whl/rocm6.4" },
+  { cmd = ".venv/bin/python -c \"import torch; print('ROCm:', torch.version.hip, '| GPU:', torch.cuda.is_available(), '| devices:', torch.cuda.device_count())\"" },
+]
+
 [tool.poe.tasks.commit]
 help = "Creates a commit"
 cmd = "git commit --signoff"
@@ -155,3 +163,8 @@ convention = "google"
 [tool.ruff.lint.flake8-tidy-imports]
 # Disallow all relative imports, "parents" | "all"
 ban-relative-imports = "all"
+
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm6.4"
+explicit = true
