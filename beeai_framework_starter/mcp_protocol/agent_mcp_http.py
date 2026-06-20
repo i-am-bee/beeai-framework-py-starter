@@ -6,13 +6,13 @@ from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
 from beeai_framework.tools import Tool
 from beeai_framework.tools.mcp import MCPTool
 from dotenv import load_dotenv
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 load_dotenv()
 
 
 async def main() -> None:
-    mcp_tools = await MCPTool.from_client(streamablehttp_client("https://remote.mcpservers.org/fetch/mcp"))  # type: ignore
+    mcp_tools = await MCPTool.from_client(streamable_http_client("https://remote.mcpservers.org/fetch/mcp"))
 
     agent = RequirementAgent(
         llm=ChatModel.from_name("ollama:granite3.3:8b"),

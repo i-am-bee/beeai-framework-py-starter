@@ -14,7 +14,7 @@ from beeai_framework.tools import Tool
 from beeai_framework.tools.mcp import MCPTool
 from beeai_framework.tools.weather import OpenMeteoTool
 from dotenv import load_dotenv
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 load_dotenv()
 
@@ -37,7 +37,10 @@ def mcp_server() -> None:
 
 
 async def mcp_client() -> None:
-    [agent_tool] = await MCPTool.from_client(streamablehttp_client("http://127.0.0.1:7777/mcp"))  # type: ignore
+    mcp_tools = await MCPTool.from_client(streamable_http_client("http://127.0.0.1:7777/mcp"))
+    if not mcp_tools:
+        raise RuntimeError("No tools returned from the MCP server.")
+    agent_tool = mcp_tools[0]
     prompt = "What's the current weather in Berlin?"
     print(f"User: {prompt}")
     response = await agent_tool.run({"input": prompt})
