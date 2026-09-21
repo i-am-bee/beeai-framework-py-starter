@@ -3,7 +3,8 @@ import os
 import sys
 import traceback
 
-from beeai_framework.agents.tool_calling import ToolCallingAgent, ToolCallingAgentSuccessEvent
+from beeai_framework.agents.requirement import RequirementAgent
+from beeai_framework.agents.requirement.events import RequirementAgentSuccessEvent
 from beeai_framework.backend import ChatModel
 from beeai_framework.emitter import EventMeta
 from beeai_framework.errors import FrameworkError
@@ -19,11 +20,11 @@ load_dotenv()
 
 async def main() -> None:
     llm = ChatModel.from_name(os.getenv("LLM_CHAT_MODEL_NAME", "ollama:granite3.3:8b"))
-    agent = ToolCallingAgent(llm=llm, tools=[DuckDuckGoSearchTool(), OpenMeteoTool()], memory=TokenMemory(llm))
+    agent = RequirementAgent(llm=llm, tools=[DuckDuckGoSearchTool(), OpenMeteoTool()], memory=TokenMemory(llm))
 
     reader = ConsoleReader({"fallback": "What is the current weather in Las Vegas?"})
 
-    def on_success(data: ToolCallingAgentSuccessEvent, event: EventMeta) -> None:
+    def on_success(data: RequirementAgentSuccessEvent, event: EventMeta) -> None:
         reader.write("Agent 🤖(update) : ", str(data.state.memory.messages[-1].to_plain()))
 
     for prompt in reader:

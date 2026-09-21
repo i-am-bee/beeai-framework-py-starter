@@ -3,11 +3,13 @@ import os
 import sys
 import traceback
 
-from beeai_framework.agents.react import ReActAgent
+from beeai_framework.agents.requirement import RequirementAgent
 from beeai_framework.backend import ChatModel
 from beeai_framework.errors import FrameworkError
 from beeai_framework.memory import UnconstrainedMemory
+from beeai_framework.middleware.trajectory import GlobalTrajectoryMiddleware
 from beeai_framework.tools.code import LocalPythonStorage, PythonTool, SandboxTool
+from beeai_framework.tools.tool import Tool
 from dotenv import load_dotenv
 
 from beeai_framework_starter.helpers.io import ConsoleReader
@@ -61,14 +63,17 @@ def get_riddle() -> Optional[Dict[str, str]]:
 """,
     )
 
-    agent = ReActAgent(llm=llm, tools=[python_tool, sandbox_tool], memory=UnconstrainedMemory())
+    agent = RequirementAgent(
+        llm=llm,
+        tools=[python_tool, sandbox_tool],
+        memory=UnconstrainedMemory(),
+        middlewares=[GlobalTrajectoryMiddleware(included=[Tool])],
+    )
 
     reader = ConsoleReader({"fallback": "Generate a random riddle."})
 
     for prompt in reader:
-        response = await agent.run(prompt, max_iterations=8, max_retries_per_step=3, total_max_retries=10).on(
-            "update", lambda data, event: reader.write(f"Agent 🤖 ({data.update.key}) : ", data.update.parsed_value)
-        )
+        response = await agent.run(prompt, max_iterations=8, max_retries_per_step=3, total_max_retries=10)
 
         reader.write("Agent 🤖 : ", response.last_message.text)
 
